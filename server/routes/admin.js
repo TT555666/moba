@@ -71,7 +71,7 @@ module.exports = app => {
   // upload.single处理单个数据,file是前端传来的
   app.post('/admin/api/upload',authMiddleWare(),upload.single('file'), async (req, res) => {
     const file = req.file
-    file.url = `http://localhost:3000/uploads/${file.filename}`
+    file.url = `http://www.ttblog.online/uploads/${file.filename}`
     res.send(file)
   })
   /*********************************登陆********************************************************** */
